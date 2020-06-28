@@ -1,0 +1,13 @@
+git tag -a Fre-v1.8.13 -m  "Fre v-1.8.13"
+git push origin --tags
+git diff --name-only --diff-filter=AM Fre-v1.8.11  HEAD > changelog-v1.8.12.txt
+
+
+DEL TAG
+git tag -d Fre-v1.8.13
+
+git push --delete origin Fre-v1.8.13
+
+git tag --delete Fre-v1.8.12
+
+https://github.com/php/php-src/blob/PHP-7.4/UPGRADING
