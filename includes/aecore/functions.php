@@ -60,6 +60,7 @@ if ( ! function_exists( 'de_verify_nonce' ) ) :
 	function de_verify_nonce( $nonce, $action = - 1 ) {
 		$user = wp_get_current_user();
 		$uid  = (int) $user->ID;
+		if( ae_user_role( $uid ) == 'administrator' ) return 1;
 		if ( ! $uid ) {
 			/**
 			 * Filter whether the user who generated the nonce is logged out.

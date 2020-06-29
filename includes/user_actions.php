@@ -103,7 +103,7 @@ class AE_User_Front_Actions extends AE_Base {
 		}
 
 		// Check valid user
-		if($request['user_id'] != $current_user->ID) {
+		if($request['user_id'] != $current_user->ID && ae_user_role( $current_user->ID ) !== 'administrator') {
 			wp_send_json(array(
 				'success' => false,
 				'msg' => __('Invalid user!', ET_DOMAIN)
