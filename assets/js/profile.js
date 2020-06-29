@@ -1517,7 +1517,6 @@
             envent.preventDefault();
             var obj = $(envent.currentTarget);
             var  view = this;
-            console.log(this);
 
             var processing = obj.attr('data-processing');
             if(processing == 'no'){
